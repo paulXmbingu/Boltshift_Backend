@@ -8,6 +8,7 @@ class DetailModelAdmin(admin.ModelAdmin):
     search_fields = ('name', 'brand', 'sku_code',)
     
     
+    
 @admin.register(CategoryModel)
 class CategoryModelAdmin(admin.ModelAdmin):
     list_display = ('category', 'sub_category')

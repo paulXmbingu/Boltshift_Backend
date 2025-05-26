@@ -1,5 +1,6 @@
 from django.db import models
 
+# DETAIL MODEL
 class DetailModel(models.Model):
     '''Product Details Model. Contains; Name, Brand, SKU Code, AI Summary Description, Currency, & Price'''
     name = models.CharField(max_length=255, verbose_name='Name', null=False, blank=False)
@@ -10,13 +11,23 @@ class DetailModel(models.Model):
     currency = models.CharField(max_length=255, verbose_name='Currency', null=False, blank=False, default='KES')
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Price', null=False, blank=False)
         
+    class Meta:
+        verbose_name = 'Detail Model'
+        verbose_name_plural = 'Detail Models'
+
     def __str__(self):
         return self.name + '-' + self.sku_code
     
-    
+
+
+# CATEGORY MODEL
 class CategoryModel(models.Model):
     category = models.CharField(max_length=255, verbose_name='Category', null=False, blank=False)
     sub_category = models.CharField(max_length=255, verbose_name='Sub Category', null=False, blank=False)
     
+    class Meta:
+        verbose_name = 'Category Model'
+        verbose_name_plural = 'Category Models'
+
     def __str__(self):
         return self.category + '-' + self.sub_category
