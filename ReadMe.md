@@ -2,7 +2,7 @@
 
 ## Setup and usage
 
-**Create and activate the virtual environment:**
+**Create and activate a virtual environment:**
    ```
    pipenv shell
    ```
