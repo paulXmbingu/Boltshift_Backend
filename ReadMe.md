@@ -24,17 +24,6 @@
 - **Responsive Design**: Enjoy a consistent experience across various devices, from smartphones to desktops.
 - **Live Chat**: Connect with customer service representatives in real-time to address queries and resolve issues.
 
-## Technologies
-- **Figma**: Design & Prototyping
-- **Miro**: Flowchart & Diagramming
-- **Dovetail**: Research Analysis & Repository
-- **Maze**: Usability Study
-- **React.js**: Frontend Framework
-- **CSS Modules**: Styling
-- **React Router**: Routing
-- **Redux**: State Management
-- **tawk.to**: Live Chat
-- **Django**: Backend Framework
 
 ## Product Engineering Team
 - Special Contributions: **Marion Ngayi & The Senjes Cuisine Team**
