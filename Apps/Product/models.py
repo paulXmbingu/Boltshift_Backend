@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 ''' DETAIL MODEL'''
 class DetailModel(models.Model):
     name = models.CharField(max_length=255, verbose_name='Name', null=False, blank=False)
