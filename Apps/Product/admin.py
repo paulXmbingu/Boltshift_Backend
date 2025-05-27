@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import DetailModel, CategoryModel, SubCategoryModel
 
 
+
 ''' DETAIL MODEL ADMIN CLASS'''
 @admin.register(DetailModel)
 class DetailModelAdmin(admin.ModelAdmin):
