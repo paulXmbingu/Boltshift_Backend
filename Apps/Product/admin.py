@@ -17,6 +17,7 @@ class CategoryModelAdmin(admin.ModelAdmin):
     search_fields = ['category']
 
 
+
 ''' SUBCATEGORY MODEL ADMIN CLASS'''
 @admin.register(SubCategoryModel)
 class SubCategoryModelAdmin(admin.ModelAdmin):
