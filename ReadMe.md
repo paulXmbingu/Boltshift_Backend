@@ -1,17 +1,5 @@
 ![Boltshift Marketplace Project Cover](https://res.cloudinary.com/excit3/image/upload/v1721684091/Boltshift%20Branding/Github_Front-end_Codebase_File_Cover_doqfbz.png)
 
-## Setup and usage
-
-**Create and activate a virtual environment:**
-   ```
-   pipenv shell
-   ```
-   
-**Install Dependencies:**
-   ```
-   pipenv install
-   ```
-
 
 ## Features
 - **User Authentication**: Secure user accounts and authentication to manage profiles and track order history.
@@ -26,7 +14,11 @@
 
 
 ## Product Engineering Team
-- Special Contributions: **Marion Ngayi & The Senjes Cuisine Team**
 - Product Research & Design: **Paul Mbingu**
 - Frontend Engineers: **Paul Mbingu**
 - Backend Engineers: **Paul Mbingu**
+- DevOps: **Paul Mbingu**
+
+
+## Special Contributions
+**Marion Ngayi & The Senjes Cuisine Team**
