@@ -2,7 +2,6 @@ from django.db import models
 
 
 
-''' DETAIL MODEL'''
 class DetailModel(models.Model):
     name = models.CharField(max_length=255, verbose_name='Name', null=False, blank=False)
     brand = models.CharField(max_length=255, verbose_name='Brand', null=False, blank=False)
@@ -22,7 +21,6 @@ class DetailModel(models.Model):
     
 
 
-'''CATEGORY MODEL'''
 class CategoryModel(models.Model):
     category = models.CharField(max_length=255, verbose_name='Category', null=False, blank=False)    
     
@@ -35,7 +33,6 @@ class CategoryModel(models.Model):
     
 
 
-'''SUBCATEGORY MODEL'''
 class SubCategoryModel(models.Model):
     sub_category = models.CharField(max_length=255, verbose_name='Sub Category', null=False, blank=False)
     
