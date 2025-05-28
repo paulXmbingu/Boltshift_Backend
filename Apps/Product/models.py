@@ -5,8 +5,6 @@ from django.db import models
 class DetailModel(models.Model):
     name = models.CharField(max_length=255, verbose_name='Name', null=False, blank=False)
     brand = models.CharField(max_length=255, verbose_name='Brand', null=False, blank=False)
-    category = models.ForeignKey('CategoryModel', on_delete=models.CASCADE, related_name='products', null=True, blank=False)
-    sub_category = models.ForeignKey('SubCategoryModel', on_delete=models.CASCADE, related_name='products', null=True, blank=False)
     sku_code = models.CharField(max_length=255, verbose_name='SKU Code', null=False, blank=False)
     product_summary = models.TextField(verbose_name='AI Summary Description', null=False, blank=False)
     currency = models.CharField(max_length=255, verbose_name='Currency', null=False, blank=False, default='KES')
@@ -42,3 +40,30 @@ class SubCategoryModel(models.Model):
 
     def __str__(self):
         return self.sub_category
+
+
+
+class PhotosModel(models.Model):
+    product_photos = models.ImageField(upload_to='Product_Photos/')
+
+    class Meta:
+        verbose_name = 'Photos Model'
+        verbose_name_plural = 'Photos Models'
+
+    def __str__(self):
+        return f"Product Photo {self.id}"
+    
+
+    
+
+class VideosModel(models.Model):
+    product_videos = models.FileField(upload_to='Product_Videos/')
+
+    class Meta:
+        verbose_name = 'Video Model'
+        verbose_name_plural = 'Video Models'
+
+    def __str__(self):
+        return f"Product Video {self.id}"
+    
+

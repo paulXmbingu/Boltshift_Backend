@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import DetailModel, CategoryModel, SubCategoryModel
+from .models import DetailModel, CategoryModel, SubCategoryModel, PhotosModel, VideosModel
 
 
 
 @admin.register(DetailModel)
 class DetailModelAdmin(admin.ModelAdmin):
-    list_display = ['name', 'sku_code', 'category', 'sub_category'] 
-    search_fields = ['name', 'sku_code', 'category__category', 'sub_category__sub_category'] 
+    list_display = ['name', 'sku_code'] 
+    search_fields = ['name', 'sku_code'] 
     
     
 
@@ -21,3 +21,20 @@ class CategoryModelAdmin(admin.ModelAdmin):
 class SubCategoryModelAdmin(admin.ModelAdmin):
     list_display = ['sub_category']
     search_fields = ['sub_category']
+
+
+
+@admin.register(PhotosModel)
+class PhotosModelAdmin(admin.ModelAdmin):
+    list_display = ['product_photos']
+    search_fields = ['product_photos']
+
+
+
+@admin.register(VideosModel)
+class VideoModelAdmin(admin.ModelAdmin):
+    list_display = ['product_videos']
+    search_fields = ['product_videos']
+
+
+
