@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 djangorestframework = "*"
 django = "*"
-gunicorn = "*"
 pillow = "*"
 
 [dev-packages]
