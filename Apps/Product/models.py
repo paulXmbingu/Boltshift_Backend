@@ -55,7 +55,6 @@ class PhotosModel(models.Model):
     
 
     
-
 class VideosModel(models.Model):
     product_videos = models.FileField(upload_to='Product_Videos/')
 
