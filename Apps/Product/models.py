@@ -4,7 +4,6 @@ from django.db import models
 
 class DetailModel(models.Model):
     name = models.CharField(max_length=255, verbose_name='Name', null=False, blank=False)
-    brand = models.CharField(max_length=255, verbose_name='Brand', null=False, blank=False)
     sku_code = models.CharField(max_length=255, verbose_name='SKU Code', null=False, blank=False)
     product_summary = models.TextField(verbose_name='AI Summary Description', null=False, blank=False)
     currency = models.CharField(max_length=255, verbose_name='Currency', null=False, blank=False, default='KES')
@@ -16,7 +15,18 @@ class DetailModel(models.Model):
 
     def __str__(self):
         return self.name + '-' + self.sku_code
-    
+
+
+class BrandModel(models.Model):
+    brand = models.CharField(max_length=255, verbose_name='Brand', null=False, blank=False)
+
+    class Meta:
+        verbose_name = 'Brand'
+        verbose_name_plural = 'Brands'
+
+    def __str__(self):
+        return self.brand
+
 
 
 class CategoryModel(models.Model):
@@ -44,7 +54,7 @@ class SubCategoryModel(models.Model):
 
 
 class PhotosModel(models.Model):
-    product_photos = models.ImageField(upload_to='Product_Photos/')
+    product_photos = models.ImageField(upload_to='Product_Photos/', null=False, blank=False)
 
     class Meta:
         verbose_name = 'Photo'
@@ -56,7 +66,7 @@ class PhotosModel(models.Model):
 
     
 class VideosModel(models.Model):
-    product_videos = models.FileField(upload_to='Product_Videos/')
+    product_videos = models.FileField(upload_to='Product_Videos/', null=True, blank=True)
 
     class Meta:
         verbose_name = 'Video'
@@ -66,3 +76,31 @@ class VideosModel(models.Model):
         return self.product_videos.name
 
 
+
+class ShowRatingModel(models.Model):
+    average_star_ratings = models.DecimalField(max_digits=2, decimal_places=1, verbose_name='Average Star Ratings', null=True, blank=True)
+    five_star_rating = models.DecimalField(max_digits=2, decimal_places=1, verbose_name='5 Star Rating', null=True, blank=True)
+    four_star_rating = models.DecimalField(max_digits=2, decimal_places=1, verbose_name='4 Star Rating', null=True, blank=True)
+    three_star_rating = models.DecimalField(max_digits=2, decimal_places=1, verbose_name='3 Star Rating', null=True, blank=True)
+    two_star_rating = models.DecimalField(max_digits=2, decimal_places=1, verbose_name='2 Star Rating', null=True, blank=True)
+    one_star_rating = models.DecimalField(max_digits=2, decimal_places=1, verbose_name='1 Star Rating', null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Star Rating'
+        verbose_name_plural = 'Star Ratings'
+    
+    def __str__(self):
+        return f'Star Rating'
+
+
+
+
+class ReviewModel(models.Model):
+    reviews_count = models.IntegerField(verbose_name='Review Count', null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Review Count'
+        verbose_name_plural = 'Reviews Count'
+
+    def __str__(self):
+        return self.reviews_count
