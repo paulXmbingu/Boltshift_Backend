@@ -51,7 +51,7 @@ class PhotosModel(models.Model):
         verbose_name_plural = 'Photos Models'
 
     def __str__(self):
-        return f"Product Photo {self.id}"
+        return self.product_photos.name
     
 
     
@@ -64,6 +64,6 @@ class VideosModel(models.Model):
         verbose_name_plural = 'Video Models'
 
     def __str__(self):
-        return f"Product Video {self.id}"
-    
+        return self.product_videos.name
+
 
