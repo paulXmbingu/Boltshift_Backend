@@ -11,8 +11,8 @@ class DetailModel(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Price', null=False, blank=False)
         
     class Meta:
-        verbose_name = 'Detail Model'
-        verbose_name_plural = 'Detail Models'
+        verbose_name = 'Detail'
+        verbose_name_plural = 'Details'
 
     def __str__(self):
         return self.name + '-' + self.sku_code
@@ -23,8 +23,8 @@ class CategoryModel(models.Model):
     category = models.CharField(max_length=255, verbose_name='Category', null=False, blank=False)    
     
     class Meta:
-        verbose_name = 'Category Model'
-        verbose_name_plural = 'Category Models'
+        verbose_name = 'Category'
+        verbose_name_plural = 'Categories'
 
     def __str__(self):
         return self.category
@@ -35,8 +35,8 @@ class SubCategoryModel(models.Model):
     sub_category = models.CharField(max_length=255, verbose_name='Sub Category', null=False, blank=False)
     
     class Meta:
-        verbose_name = 'Sub Category Model'
-        verbose_name_plural = 'Sub Category Models'
+        verbose_name = 'Sub Category'
+        verbose_name_plural = 'Sub Categories'
 
     def __str__(self):
         return self.sub_category
@@ -47,8 +47,8 @@ class PhotosModel(models.Model):
     product_photos = models.ImageField(upload_to='Product_Photos/')
 
     class Meta:
-        verbose_name = 'Photos Model'
-        verbose_name_plural = 'Photos Models'
+        verbose_name = 'Photo'
+        verbose_name_plural = 'Photos'
 
     def __str__(self):
         return self.product_photos.name
@@ -60,8 +60,8 @@ class VideosModel(models.Model):
     product_videos = models.FileField(upload_to='Product_Videos/')
 
     class Meta:
-        verbose_name = 'Video Model'
-        verbose_name_plural = 'Video Models'
+        verbose_name = 'Video'
+        verbose_name_plural = 'Videos'
 
     def __str__(self):
         return self.product_videos.name
