@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import DetailModel,CategoryModel, SubCategoryModel, PhotosModel, VideosModel, BrandModel, ShowRatingModel,ReviewModel
+from .models import DetailModel,CategoryModel, SubCategoryModel, PhotosModel, VideosModel, BrandModel, ShowRatingModel,ReviewModel, InventoryMeterModel, OptionsModel, TagsModel, DescriptionModel
 
 
 
@@ -56,3 +56,31 @@ class ShowRatingModelAdmin(admin.ModelAdmin):
 class ReviewModelAdmin(admin.ModelAdmin):
     list_display = ['reviews_count']
     search_fields = ['reviews_count']
+
+
+
+@admin.register(InventoryMeterModel)
+class InventoryMeterModelAdmin(admin.ModelAdmin):
+    list_display = ['remaining_items', 'total_items']
+    search_fields = ['remaining_items', 'total_items']
+
+
+
+@admin.register(OptionsModel)
+class OptionsModelAdmin(admin.ModelAdmin):
+    list_display = ['option_1_selector', 'option_2_selector']
+    search_fields = ['option_1_selector', 'option_2_selector']
+
+
+
+@admin.register(TagsModel)
+class TagsModelAdmin(admin.ModelAdmin):
+    list_display = ['tag_list']
+    search_fields = ['tag_list']
+
+
+
+@admin.register(DescriptionModel)
+class DescriptionModelAdmin(admin.ModelAdmin):
+    list_display = ['long_description']
+    search_fields = ['long_description']

@@ -94,7 +94,6 @@ class ShowRatingModel(models.Model):
 
 
 
-
 class ReviewModel(models.Model):
     reviews_count = models.IntegerField(verbose_name='Review Count', null=True, blank=True)
 
@@ -103,4 +102,55 @@ class ReviewModel(models.Model):
         verbose_name_plural = 'Reviews Count'
 
     def __str__(self):
-        return self.reviews_count
+        return str(self.reviews_count)
+
+
+
+class InventoryMeterModel(models.Model):
+    remaining_items = models.IntegerField(verbose_name='Remaining Items', null=False, blank=False)
+    total_items = models.IntegerField(verbose_name='Total Items', null=False, blank=False)
+
+    class Meta:
+        verbose_name = 'Inventory Meter'
+        verbose_name_plural = 'Inventory Meters'
+
+    def __str__(self):
+        return f'{self.remaining_items} out of  {self.total_items}'
+
+
+
+class OptionsModel(models.Model):
+    option_1_selector = models.CharField(max_length=255, verbose_name='Option 1 Selector', null=False, blank=False)
+    option_2_selector = models.CharField(max_length=255, verbose_name='Option 2 Selector', null=False, blank=False)
+
+    class Meta:
+        verbose_name = 'Option'
+        verbose_name_plural = 'Options'
+    
+    def __str__(self):
+        return f'Opt 1 {self.option_1_selector}, Opt 2 {self.option_2_selector}'
+    
+
+
+class TagsModel(models.Model):
+    tag_list = models.CharField(max_length=255, verbose_name='Tags List', null=False, blank=False)
+
+    class Meta:
+        verbose_name = 'Tags List'
+        verbose_name_plural = 'Tags Lists'
+    
+    def __str__(self):
+        return self.tag_list
+    
+
+
+class DescriptionModel(models.Model):
+    long_description = models.TextField(verbose_name='Long Description', null=False, blank=False)
+
+    class Meta:
+        verbose_name = 'Description'
+        verbose_name_plural = 'Descriptions'
+    
+    def __str__(self):
+        return self.long_description
+    
