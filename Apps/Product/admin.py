@@ -1,5 +1,11 @@
 from django.contrib import admin
-from .models import DetailModel,CategoryModel, SubCategoryModel, PhotosModel, VideosModel, BrandModel, ShowRatingModel,ReviewModel, InventoryMeterModel, OptionsModel, TagsModel, DescriptionModel
+from .models import (
+    DetailModel,CategoryModel, SubCategoryModel,
+    PhotosModel, VideosModel, BrandModel,
+    ShowRatingModel,ReviewModel, InventoryMeterModel,
+    Option1Model, Option2Model, TagsModel,
+    DescriptionModel, SpecificationModel,
+)
 
 
 
@@ -14,7 +20,7 @@ class DetailModelAdmin(admin.ModelAdmin):
 class BrandModelAdmin(admin.ModelAdmin):
     list_display = ['brand']
     search_fields = ['brand']
-    
+ 
 
 
 @admin.register(CategoryModel)
@@ -66,10 +72,17 @@ class InventoryMeterModelAdmin(admin.ModelAdmin):
 
 
 
-@admin.register(OptionsModel)
-class OptionsModelAdmin(admin.ModelAdmin):
-    list_display = ['option_1_selector', 'option_2_selector']
-    search_fields = ['option_1_selector', 'option_2_selector']
+@admin.register(Option1Model)
+class Option1ModelAdmin(admin.ModelAdmin):
+    list_display = ['option_1_selector']
+    search_fields = ['option_1_selector']
+
+
+
+@admin.register(Option2Model)
+class Option2ModelAdmin(admin.ModelAdmin):
+    list_display = ['option_2_selector']
+    search_fields = ['option_2_selector']
 
 
 
@@ -84,3 +97,10 @@ class TagsModelAdmin(admin.ModelAdmin):
 class DescriptionModelAdmin(admin.ModelAdmin):
     list_display = ['long_description']
     search_fields = ['long_description']
+
+
+
+@admin.register(SpecificationModel)
+class SpecificationModelAdmin(admin.ModelAdmin):
+    list_display = ['specification']
+    search_fields = ['specification']

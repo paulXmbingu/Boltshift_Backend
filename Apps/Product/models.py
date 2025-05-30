@@ -119,17 +119,29 @@ class InventoryMeterModel(models.Model):
 
 
 
-class OptionsModel(models.Model):
+class Option1Model(models.Model):
     option_1_selector = models.CharField(max_length=255, verbose_name='Option 1 Selector', null=False, blank=False)
+
+    class Meta:
+        verbose_name = 'Option 1'
+        verbose_name_plural = 'Options 1'
+    
+    def __str__(self):
+        return f'Opt 1 {self.option_1_selector}'
+    
+
+
+class Option2Model(models.Model):
     option_2_selector = models.CharField(max_length=255, verbose_name='Option 2 Selector', null=False, blank=False)
 
     class Meta:
-        verbose_name = 'Option'
-        verbose_name_plural = 'Options'
+        verbose_name = 'Option 2'
+        verbose_name_plural = 'Options 2'
     
     def __str__(self):
-        return f'Opt 1 {self.option_1_selector}, Opt 2 {self.option_2_selector}'
+        return f'Opt 2 {self.option_2_selector}'
     
+
 
 
 class TagsModel(models.Model):
@@ -154,3 +166,15 @@ class DescriptionModel(models.Model):
     def __str__(self):
         return self.long_description
     
+
+
+class SpecificationModel(models.Model):
+    specification = models.TextField(verbose_name='Specification', null=False, blank=False)
+
+    class Meta:
+        verbose_name = 'Specification'
+        verbose_name_plural = 'Specifications'
+    
+    def __str__(self):
+        return self.specification
+
