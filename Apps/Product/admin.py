@@ -4,7 +4,7 @@ from .models import (
     PhotosModel, VideosModel, BrandModel,
     ShowRatingModel,ReviewModel, InventoryMeterModel,
     Option1Model, Option2Model, TagsModel,
-    DescriptionModel, SpecificationModel,
+    DescriptionModel, SpecificationModel, SummaryDescriptionModel
 )
 
 
@@ -14,7 +14,16 @@ from .models import (
 @admin.register(DetailModel)
 class DetailModelAdmin(admin.ModelAdmin):
     list_display = ['name', 'sku_code'] 
-    search_fields = ['name', 'sku_code'] 
+    search_fields = ['name', 'sku_code']
+
+
+
+
+
+@admin.register(SummaryDescriptionModel)
+class SummaryDescriptionModelAdmin(admin.ModelAdmin):
+    list_display = ['summary_description'] 
+    search_fields = ['summary_description'] 
 
 
 
