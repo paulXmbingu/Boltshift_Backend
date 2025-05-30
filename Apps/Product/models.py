@@ -27,7 +27,7 @@ class SummaryDescriptionModel(models.Model):
         
     class Meta:
         verbose_name = 'Summary Description'
-        verbose_name_plural = 'Summary Description'
+        verbose_name_plural = 'Summary Descriptions'
 
     def __str__(self):
         return self.summary_description
