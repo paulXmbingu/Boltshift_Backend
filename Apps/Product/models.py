@@ -18,6 +18,7 @@ class DetailModel(models.Model):
 
 
 
+
 class BrandModel(models.Model):
     brand = models.CharField(max_length=255, verbose_name='Brand', null=False, blank=False)
 
@@ -66,9 +67,9 @@ class PhotosModel(models.Model):
 
     def __str__(self):
         return self.product_photos.name
-    
 
-    
+
+
 
 class VideosModel(models.Model):
     product_videos = models.FileField(upload_to='Product_Videos/', null=True, blank=True)
