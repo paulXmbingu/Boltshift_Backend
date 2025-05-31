@@ -2,7 +2,9 @@ from rest_framework import serializers
 from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
     CategoryModel, SubCategoryModel, PhotosModel, 
-    ShowRatingModel, ReviewModel, InventoryMeterModel
+    ShowRatingModel, ReviewModel, InventoryMeterModel, 
+    Option1Model, Option2Model, TagsModel, DescriptionModel,
+    SpecificationModel, 
 )
 
 
@@ -84,4 +86,49 @@ class ReviewModelSerializer(serializers.ModelSerializer):
 class InventoryMeterModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = InventoryMeterModel
+        fields = '__all__'
+
+
+
+
+
+class Option1ModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Option1Model
+        fields = '__all__'
+
+
+
+
+
+class Option2ModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Option2Model
+        fields = '__all__'
+
+
+
+
+
+class TagsModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TagsModel
+        fields = '__all__'
+
+
+
+
+
+class DescriptionModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = DescriptionModel
+        fields = '__all__'
+
+
+
+
+
+class SpecificationModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SpecificationModel
         fields = '__all__'
