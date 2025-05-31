@@ -4,15 +4,28 @@ from .models import (
     PhotosModel, VideosModel, BrandModel,
     ShowRatingModel,ReviewModel, InventoryMeterModel,
     Option1Model, Option2Model, TagsModel,
-    DescriptionModel, SpecificationModel,
+    DescriptionModel, SpecificationModel, SummaryDescriptionModel
 )
+
+
 
 
 
 @admin.register(DetailModel)
 class DetailModelAdmin(admin.ModelAdmin):
     list_display = ['name', 'sku_code'] 
-    search_fields = ['name', 'sku_code'] 
+    search_fields = ['name', 'sku_code']
+
+
+
+
+
+@admin.register(SummaryDescriptionModel)
+class SummaryDescriptionModelAdmin(admin.ModelAdmin):
+    list_display = ['summary_description'] 
+    search_fields = ['summary_description'] 
+
+
 
 
 
@@ -23,10 +36,14 @@ class BrandModelAdmin(admin.ModelAdmin):
  
 
 
+
+
 @admin.register(CategoryModel)
 class CategoryModelAdmin(admin.ModelAdmin):
     list_display = ['category']
     search_fields = ['category']
+
+
 
 
 
@@ -37,10 +54,14 @@ class SubCategoryModelAdmin(admin.ModelAdmin):
 
 
 
+
+
 @admin.register(PhotosModel)
 class PhotosModelAdmin(admin.ModelAdmin):
     list_display = ['product_photos']
     search_fields = ['product_photos']
+
+
 
 
 
@@ -51,10 +72,14 @@ class VideoModelAdmin(admin.ModelAdmin):
 
 
 
+
+
 @admin.register(ShowRatingModel)
 class ShowRatingModelAdmin(admin.ModelAdmin):
     list_display = ['average_star_ratings', 'five_star_rating', 'four_star_rating', 'three_star_rating', 'two_star_rating', 'one_star_rating', ]
     search_fields = ['average_star_ratings', 'five_star_rating', 'four_star_rating', 'three_star_rating', 'two_star_rating', 'one_star_rating', ]
+
+
 
 
 
@@ -65,10 +90,14 @@ class ReviewModelAdmin(admin.ModelAdmin):
 
 
 
+
+
 @admin.register(InventoryMeterModel)
 class InventoryMeterModelAdmin(admin.ModelAdmin):
     list_display = ['remaining_items', 'total_items']
     search_fields = ['remaining_items', 'total_items']
+
+
 
 
 
@@ -79,10 +108,14 @@ class Option1ModelAdmin(admin.ModelAdmin):
 
 
 
+
+
 @admin.register(Option2Model)
 class Option2ModelAdmin(admin.ModelAdmin):
     list_display = ['option_2_selector']
     search_fields = ['option_2_selector']
+
+
 
 
 
@@ -93,10 +126,14 @@ class TagsModelAdmin(admin.ModelAdmin):
 
 
 
+
+
 @admin.register(DescriptionModel)
 class DescriptionModelAdmin(admin.ModelAdmin):
     list_display = ['long_description']
     search_fields = ['long_description']
+
+
 
 
 
