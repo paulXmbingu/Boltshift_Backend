@@ -1,11 +1,15 @@
 from rest_framework.generics import (ListAPIView, CreateAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView)
-from .models import DetailModel
-from .serializers import DetailModelSerializer
+from .models import (
+    DetailModel,
+    )
+from .serializers import (
+    DetailModelSerializer,
+    )
 
 
 
 
-'''DETAIL MODEL VIEW'''
+
 class DetailModelListView(ListAPIView):
     queryset = DetailModel.objects.all()
     serializer_class = DetailModelSerializer
