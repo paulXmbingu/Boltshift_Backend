@@ -26,6 +26,6 @@ class DetailUpdateView(generics.UpdateAPIView):
     queryset = DetailModel.objects.all()
     serializer_class = DetailModelSerializer
 
-class DetailDeleteView(generics.DestroyAPIView):
+class DetailDestroyView(generics.DestroyAPIView):
     queryset = DetailModel.objects.all()
     serializer_class = DetailModelSerializer
