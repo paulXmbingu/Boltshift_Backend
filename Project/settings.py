@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    # App Dependecies
+    # Third-party Apps
     'rest_framework',
     
     # Project Apps
