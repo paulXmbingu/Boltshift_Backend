@@ -9,7 +9,7 @@ from .serializers import (
 
 
 
-'''DETAIL VIEWS'''
+
 class DetailListView(generics.ListAPIView):
     queryset = DetailModel.objects.all()
     serializer_class = DetailModelSerializer
@@ -34,7 +34,6 @@ class DetailDestroyView(generics.DestroyAPIView):
 
 
 
-'''SUMMARY DESCRIPTION VIEW'''
 class SummaryDescriptionListView(generics.ListAPIView):
     queryset = SummaryDescriptionModel.objects.all()
     serializer_class = SummaryDescriptionSerializer
