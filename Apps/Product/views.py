@@ -9,8 +9,23 @@ from .serializers import (
 
 
 
-
+'''DETAIL VIEWS'''
 class DetailListView(generics.ListAPIView):
     queryset = DetailModel.objects.all()
     serializer_class = DetailModelSerializer
 
+class DetailCreateView(generics.CreateAPIView):
+    queryset = DetailModel.objects.all()
+    serializer_class = DetailModelSerializer
+
+class DetailRetrieveView(generics.RetrieveAPIView):
+    queryset = DetailModel.objects.all()
+    serializer_class = DetailModelSerializer
+
+class DetailUpdateView(generics.UpdateAPIView):
+    queryset = DetailModel.objects.all()
+    serializer_class = DetailModelSerializer
+
+class DetailDeleteView(generics.DestroyAPIView):
+    queryset = DetailModel.objects.all()
+    serializer_class = DetailModelSerializer
