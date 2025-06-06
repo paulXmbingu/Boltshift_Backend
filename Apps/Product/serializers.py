@@ -1,10 +1,10 @@
 from rest_framework import serializers
 from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
-    CategoryModel, SubCategoryModel, PhotosModel, 
-    ShowRatingModel, ReviewModel, InventoryMeterModel, 
-    Option1Model, Option2Model, TagsModel, DescriptionModel,
-    SpecificationModel, 
+    CategoryModel, SubCategoryModel, PhotosModel,
+    VideosModel, ShowRatingModel, ReviewModel, 
+    InventoryMeterModel, Option1Model, Option2Model, 
+    TagsModel, DescriptionModel, SpecificationModel, 
 )
 
 
@@ -59,6 +59,15 @@ class SubCategoryModelSerializer(serializers.ModelSerializer):
 class PhotosModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = PhotosModel
+        fields = '__all__'
+
+
+
+
+
+class VideosModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = VideosModel
         fields = '__all__'
 
 

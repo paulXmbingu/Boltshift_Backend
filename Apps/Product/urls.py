@@ -5,7 +5,8 @@ from .views import (
     BrandListView, BrandCreateView, BrandRetrieveView, BrandUpdateView, BrandDestroyView,
     CategoryListView, CategoryCreateView, CategoryRetrieveView, CategoryUpdateView, CategoryDestroyView,
     SubCategoryListView, SubCategoryCreateView, SubCategoryRetrieveView, SubCategoryUpdateView, SubCategoryDestroyView,
-
+    PhotosListView, PhotosCreateView, PhotosRetrieveView, PhotosUpdateView, PhotosDestroyView,
+    VideosListView, VideosCreateView, VideosRetrieveView, VideosUpdateView, VideosDestroyView, 
     )
 
 urlpatterns = [
@@ -32,6 +33,24 @@ urlpatterns = [
     path('category/retrieve/<int:pk>/',CategoryRetrieveView.as_view(), name='category-retrieve'),
     path('category/update/<int:pk>/', CategoryUpdateView.as_view(), name='category-update'),
     path('category/destroy/<int:pk>/', CategoryDestroyView.as_view(), name='category-destroy'),
+
+    path('sub_category/', SubCategoryListView.as_view(), name='sub-category'),
+    path('sub_category/create/', SubCategoryCreateView.as_view(), name='sub-category-create'),
+    path('sub-category/retrieve/<int:pk>/', SubCategoryRetrieveView.as_view(), name='sub-category-retrieve'),
+    path('sub-category/update/<int:pk>/', SubCategoryUpdateView.as_view(), name='sub-category-update'),
+    path('sub-category/destroy/<int:pk>/', SubCategoryDestroyView.as_view(), name='sub-category-destroy'),
+
+    path('photos/', PhotosListView.as_view(), name='photos'),
+    path('photos/create/', PhotosCreateView.as_view(), name='photos-create'),
+    path('photos/retrieve/<int:pk>/', PhotosRetrieveView.as_view(), name='photos-retrieve'),
+    path('photos/update/<int:pk>/', PhotosUpdateView.as_view(), name='photos-update'),
+    path('photos/destroy/<int:pk>/', PhotosDestroyView.as_view(), name='photos-destroy'),
+
+    path('videos/', VideosListView.as_view(), name='videos-list'),
+    path('videos/create/', VideosCreateView.as_view(), name='videos-create'),
+    path('videos/retrieve/<int:pk>/', VideosRetrieveView.as_view(), name='videos-retrieve'),
+    path('videos/update/<int:pk>/', VideosUpdateView.as_view(), name='videos-update'),
+    path('videos/destroy/<int:pk>/', VideosDestroyView.as_view(), name='videos-destroy')
 
     
 ]
