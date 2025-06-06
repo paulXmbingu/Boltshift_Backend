@@ -79,3 +79,27 @@ class BrandUpdateView(generics.UpdateAPIView):
 class BrandDestroyView(generics.DestroyAPIView):
     queryset = BrandModel.objects.all()
     serializer_class = BrandModelSerializer
+
+
+
+
+
+class CategoryListView(generics.ListAPIView):
+    queryset = CategoryModel.objects.all()
+    serializer_class = CategoryModelSerializer
+
+class CategoryCreateView(generics.CreateAPIView):
+    queryset = CategoryModel.objects.all()
+    serializer_class = CategoryModelSerializer
+
+class CategoryRetrieveView(generics.RetrieveAPIView):
+    queryset = CategoryModel.objects.all()
+    serializer_class = CategoryModelSerializer
+
+class CategoryUpdateView(generics.UpdateAPIView):
+    queryset = CategoryModel.objects.all()
+    serializer_class = CategoryModelSerializer
+
+class CategoryDestroyView(generics.DestroyAPIView):
+    queryset = CategoryModel.objects.all()
+    serializer_class = CategoryModelSerializer

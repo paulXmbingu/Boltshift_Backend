@@ -2,7 +2,8 @@ from django.urls import path
 from .views import (
     DetailListView, DetailCreateView, DetailRetrieveView, DetailUpdateView, DetailDestroyView,
     SummaryDescriptionListView, SummaryDescriptionCreateView, SummaryDescriptionRetrieveView, SummaryDescriptionUpdateView, SummaryDescriptionDestroyView,
-    BrandListView, BrandCreateView, BrandRetrieveView, BrandUpdateView, BrandDestroyView
+    BrandListView, BrandCreateView, BrandRetrieveView, BrandUpdateView, BrandDestroyView,
+    CategoryListView, CategoryCreateView, CategoryRetrieveView, CategoryUpdateView, CategoryDestroyView
     )
 
 urlpatterns = [
@@ -23,6 +24,12 @@ urlpatterns = [
     path('brand/retrieve/<int:pk>/', BrandRetrieveView.as_view(), name='brand-retrieve'),
     path('brand/update/<int:pk>/', BrandUpdateView.as_view(), name='brand-update'),
     path('brand/destroy/<int:pk>/', BrandDestroyView.as_view(), name='brand-destroy'),
+
+    path('category/', CategoryListView.as_view(), name='category-list'),
+    path('category/create/', CategoryCreateView.as_view(), name='category-create'),
+    path('category/retrieve/<int:pk>/',CategoryRetrieveView.as_view(), name='category-retrieve'),
+    path('category/update/<int:pk>/', CategoryUpdateView.as_view(), name='category-update'),
+    path('category/destroy/<int:pk>/', CategoryDestroyView.as_view(), name='category-destroy'),
 
     
 ]
