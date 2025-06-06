@@ -3,7 +3,9 @@ from .views import (
     DetailListView, DetailCreateView, DetailRetrieveView, DetailUpdateView, DetailDestroyView,
     SummaryDescriptionListView, SummaryDescriptionCreateView, SummaryDescriptionRetrieveView, SummaryDescriptionUpdateView, SummaryDescriptionDestroyView,
     BrandListView, BrandCreateView, BrandRetrieveView, BrandUpdateView, BrandDestroyView,
-    CategoryListView, CategoryCreateView, CategoryRetrieveView, CategoryUpdateView, CategoryDestroyView
+    CategoryListView, CategoryCreateView, CategoryRetrieveView, CategoryUpdateView, CategoryDestroyView,
+    SubCategoryListView, SubCategoryCreateView, SubCategoryRetrieveView, SubCategoryUpdateView, SubCategoryDestroyView,
+
     )
 
 urlpatterns = [

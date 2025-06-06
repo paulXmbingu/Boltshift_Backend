@@ -1,11 +1,11 @@
 from rest_framework import generics
 from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
-    CategoryModel, 
+    CategoryModel, SubCategoryModel, 
     )
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
-    CategoryModelSerializer, 
+    CategoryModelSerializer, SubCategoryModelSerializer
     )
 
 
@@ -103,3 +103,27 @@ class CategoryUpdateView(generics.UpdateAPIView):
 class CategoryDestroyView(generics.DestroyAPIView):
     queryset = CategoryModel.objects.all()
     serializer_class = CategoryModelSerializer
+
+
+
+
+
+class SubCategoryListView(generics.ListAPIView):
+    queryset = SubCategoryModel.objects.all()
+    serializer_class = SubCategoryModelSerializer
+
+class SubCategoryCreateView(generics.CreateAPIView):
+    queryset = SubCategoryModel.objects.all()
+    serializer_class = SubCategoryModelSerializer
+
+class SubCategoryRetrieveView(generics.RetrieveAPIView):
+    queryset = SubCategoryModel.objects.all()
+    serializer_class = SubCategoryModelSerializer
+
+class SubCategoryUpdateView(generics.UpdateAPIView):
+    queryset = SubCategoryModel.objects.all()
+    serializer_class = SubCategoryModelSerializer
+
+class SubCategoryDestroyView(generics.DestroyAPIView):
+    queryset = SubCategoryModel.objects.all()
+    serializer_class = SubCategoryModelSerializer
