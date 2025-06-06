@@ -5,6 +5,7 @@ from .views import (
     BrandListView, BrandCreateView, BrandRetrieveView, BrandUpdateView, BrandDestroyView,
     CategoryListView, CategoryCreateView, CategoryRetrieveView, CategoryUpdateView, CategoryDestroyView,
     SubCategoryListView, SubCategoryCreateView, SubCategoryRetrieveView, SubCategoryUpdateView, SubCategoryDestroyView,
+    PhotosListView, PhotosCreateView, PhotosRetrieveView, PhotosUpdateView, PhotosDestroyView,
 
     )
 
@@ -39,5 +40,5 @@ urlpatterns = [
     path('sub-category/update/<int:pk>/', SubCategoryUpdateView.as_view(), name='sub-category-update'),
     path('sub-category/destroy/<int:pk>/', SubCategoryDestroyView.as_view(), name='sub-category-destroy'),
 
-    
+
 ]
