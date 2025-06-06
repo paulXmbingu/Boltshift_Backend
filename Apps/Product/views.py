@@ -151,3 +151,4 @@ class PhotosUpdateView(generics.UpdateAPIView):
 class PhotosDestroyView(generics.DestroyAPIView):
     queryset = PhotosModel.objects.all()
     serializer_class = PhotosModelSerializer
+    
