@@ -1,9 +1,9 @@
 from rest_framework import generics
 from .models import (
-    DetailModel, SummaryDescriptionModel, 
+    DetailModel, SummaryDescriptionModel, BrandModel
     )
 from .serializers import (
-    DetailModelSerializer, SummaryDescriptionSerializer, 
+    DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer
     )
 
 
@@ -53,3 +53,28 @@ class SummaryDescriptionUpdateView(generics.UpdateAPIView):
 class SummaryDescriptionDestroyView(generics.DestroyAPIView):
     queryset = SummaryDescriptionModel.objects.all()
     serializer_class = SummaryDescriptionSerializer
+
+
+
+
+
+class BrandListView(generics.ListAPIView):
+    queryset = BrandModel.objects.all()
+    serializer_class = BrandModelSerializer
+
+class BrandCreateView(generics.CreateAPIView):
+    queryset = BrandModel.objects.all()
+    serializer_class = BrandModelSerializer
+
+class BrandRetrieveView(generics.RetrieveAPIView):
+    queryset = BrandModel.objects.all()
+    serializer_class = BrandModelSerializer
+
+class BrandUpdateView(generics.UpdateAPIView):
+    queryset = BrandModel.objects.all()
+    serializer_class = BrandModelSerializer
+
+class BrandDestroyView(generics.DestroyAPIView):
+    queryset = BrandModel.objects.all()
+    serializer_class = BrandModelSerializer
+    
