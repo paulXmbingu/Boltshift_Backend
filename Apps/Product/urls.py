@@ -33,5 +33,5 @@ urlpatterns = [
     path('category/update/<int:pk>/', CategoryUpdateView.as_view(), name='category-update'),
     path('category/destroy/<int:pk>/', CategoryDestroyView.as_view(), name='category-destroy'),
 
-    
+    path('sub_category/', SubCategoryListView.as_view(), name='sub-category'),
 ]
