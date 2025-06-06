@@ -1,9 +1,11 @@
 from rest_framework import generics
 from .models import (
-    DetailModel, SummaryDescriptionModel, BrandModel
+    DetailModel, SummaryDescriptionModel, BrandModel,
+    CategoryModel, 
     )
 from .serializers import (
-    DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer
+    DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
+    CategoryModelSerializer, 
     )
 
 
@@ -77,4 +79,3 @@ class BrandUpdateView(generics.UpdateAPIView):
 class BrandDestroyView(generics.DestroyAPIView):
     queryset = BrandModel.objects.all()
     serializer_class = BrandModelSerializer
-    

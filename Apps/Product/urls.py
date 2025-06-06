@@ -2,6 +2,7 @@ from django.urls import path
 from .views import (
     DetailListView, DetailCreateView, DetailRetrieveView, DetailUpdateView, DetailDestroyView,
     SummaryDescriptionListView, SummaryDescriptionCreateView, SummaryDescriptionRetrieveView, SummaryDescriptionUpdateView, SummaryDescriptionDestroyView,
+    BrandListView, BrandCreateView, BrandRetrieveView, BrandUpdateView, BrandDestroyView
     )
 
 urlpatterns = [
@@ -15,5 +16,13 @@ urlpatterns = [
     path('summary_description/create/', SummaryDescriptionCreateView.as_view(), name='summary-description-create'),
     path('summary_description/retrieve/<int:pk>/', SummaryDescriptionRetrieveView.as_view(), name='summary-description-retrieve'),
     path('summary_description/update/<int:pk>/', SummaryDescriptionUpdateView.as_view(), name='summary-description-update'),
-    path('summary_description/destroy/<int:pk>/', SummaryDescriptionDestroyView.as_view(), name='summary-description-destroy')
+    path('summary_description/destroy/<int:pk>/', SummaryDescriptionDestroyView.as_view(), name='summary-description-destroy'),
+
+    path('brand/', BrandListView.as_view(), name='brand-list'),
+    path('brand/create/', BrandCreateView.as_view(), name='brand-create'),
+    path('brand/retrieve/<int:pk>/', BrandRetrieveView.as_view(), name='brand-retrieve'),
+    path('brand/update/<int:pk>/', BrandUpdateView.as_view(), name='brand-update'),
+    path('brand/destroy/<int:pk>/', BrandDestroyView.as_view(), name='brand-destroy'),
+
+    
 ]
