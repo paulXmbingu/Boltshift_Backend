@@ -34,4 +34,10 @@ urlpatterns = [
     path('category/destroy/<int:pk>/', CategoryDestroyView.as_view(), name='category-destroy'),
 
     path('sub_category/', SubCategoryListView.as_view(), name='sub-category'),
+    path('sub_category/create/', SubCategoryCreateView.as_view(), name='sub-category-create'),
+    path('sub-category/retrieve/<int:pk>/', SubCategoryRetrieveView.as_view(), name='sub-category-retrieve'),
+    path('sub-category/update/<int:pk>/', SubCategoryUpdateView.as_view(), name='sub-category-update'),
+    path('sub-category/destroy/<int:pk>/', SubCategoryDestroyView.as_view(), name='sub-category-destroy'),
+
+    
 ]
