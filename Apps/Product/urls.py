@@ -6,7 +6,7 @@ from .views import (
     CategoryListView, CategoryCreateView, CategoryRetrieveView, CategoryUpdateView, CategoryDestroyView,
     SubCategoryListView, SubCategoryCreateView, SubCategoryRetrieveView, SubCategoryUpdateView, SubCategoryDestroyView,
     PhotosListView, PhotosCreateView, PhotosRetrieveView, PhotosUpdateView, PhotosDestroyView,
-
+    VideosListView, VideosCreateView, VideosRetrieveView, VideosUpdateView, VideosDestroyView, 
     )
 
 urlpatterns = [
@@ -44,7 +44,13 @@ urlpatterns = [
     path('photos/create/', PhotosCreateView.as_view(), name='photos-create'),
     path('photos/retrieve/<int:pk>/', PhotosRetrieveView.as_view(), name='photos-retrieve'),
     path('photos/update/<int:pk>/', PhotosUpdateView.as_view(), name='photos-update'),
-    path('photos/destroy/destroy/<int:pk>', PhotosDestroyView.as_view(), name='photos-destroy'),
+    path('photos/destroy/<int:pk>/', PhotosDestroyView.as_view(), name='photos-destroy'),
+
+    path('videos/', VideosListView.as_view(), name='videos-list'),
+    path('videos/create/', VideosCreateView.as_view(), name='videos-create'),
+    path('videos/retrieve/<int:pk>/', VideosRetrieveView.as_view(), name='videos-retrieve'),
+    path('videos/update/<int:pk>/', VideosUpdateView.as_view(), name='videos-update'),
+    path('videos/destroy/<int:pk>/', VideosDestroyView.as_view(), name='videos-destroy')
 
     
 ]

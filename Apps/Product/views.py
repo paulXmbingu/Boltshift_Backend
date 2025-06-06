@@ -2,10 +2,12 @@ from rest_framework import generics
 from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
     CategoryModel, SubCategoryModel, PhotosModel, 
+    VideosModel, 
     )
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
-    CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer
+    CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer,
+    VideosModelSerializer
     )
 
 
@@ -151,4 +153,27 @@ class PhotosUpdateView(generics.UpdateAPIView):
 class PhotosDestroyView(generics.DestroyAPIView):
     queryset = PhotosModel.objects.all()
     serializer_class = PhotosModelSerializer
-    
+
+
+
+
+
+class VideosListView(generics.ListAPIView):
+    queryset = VideosModel.objects.all()
+    serializer_class = VideosModelSerializer
+
+class VideosCreateView(generics.CreateAPIView):
+    queryset = VideosModel.objects.all()
+    serializer_class = VideosModelSerializer
+
+class VideosRetrieveView(generics.RetrieveAPIView):
+    queryset = VideosModel.objects.all()
+    serializer_class = VideosModelSerializer
+
+class VideosUpdateView(generics.UpdateAPIView):
+    queryset = VideosModel.objects.all()
+    serializer_class = VideosModelSerializer
+
+class VideosDestroyView(generics.DestroyAPIView):
+    queryset = VideosModel.objects.all()
+    serializer_class = VideosModelSerializer
