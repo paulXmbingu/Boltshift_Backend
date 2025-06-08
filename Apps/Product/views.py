@@ -2,13 +2,13 @@ from rest_framework import generics
 from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
     CategoryModel, SubCategoryModel, PhotosModel, 
-    VideosModel, ShowRatingModel, 
-    )
+    VideosModel, 
+)
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
     CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer,
-    VideosModelSerializer, ShowRatingModelSerializer
-    )
+    VideosModelSerializer, 
+)
 
 
 
