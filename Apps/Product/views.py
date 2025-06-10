@@ -2,12 +2,12 @@ from rest_framework import generics
 from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
     CategoryModel, SubCategoryModel, PhotosModel, 
-    VideosModel, 
+    VideosModel, ShowRatingModel, 
 )
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
     CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer,
-    VideosModelSerializer, 
+    VideosModelSerializer, ShowRatingModelSerializer
 )
 
 
@@ -182,3 +182,6 @@ class VideosDestroyView(generics.DestroyAPIView):
 
 
 
+class ShowRatingListView(generics.ListAPIView):
+    queryset = ShowRatingModel.objects.all()
+    serializer_class = ShowRatingModelSerializer
