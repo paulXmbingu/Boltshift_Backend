@@ -3,12 +3,12 @@ from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
     CategoryModel, SubCategoryModel, PhotosModel, 
     VideosModel, ShowRatingModel, 
-    )
+)
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
     CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer,
     VideosModelSerializer, ShowRatingModelSerializer
-    )
+)
 
 
 
@@ -182,3 +182,6 @@ class VideosDestroyView(generics.DestroyAPIView):
 
 
 
+class ShowRatingListView(generics.ListAPIView):
+    queryset = ShowRatingModel.objects.all()
+    serializer_class = ShowRatingModelSerializer
