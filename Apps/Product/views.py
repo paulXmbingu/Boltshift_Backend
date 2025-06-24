@@ -185,3 +185,19 @@ class VideosDestroyView(generics.DestroyAPIView):
 class ShowRatingListView(generics.ListAPIView):
     queryset = ShowRatingModel.objects.all()
     serializer_class = ShowRatingModelSerializer
+
+class ShowRatingCreateView(generics.CreateAPIView):
+    queryset = ShowRatingModel.objects.all()
+    serializer_class = ShowRatingModelSerializer
+
+class ShowRatingRetrieveView(generics.RetrieveAPIView):
+    queryset = ShowRatingModel.objects.all()
+    serializer_class = ShowRatingModelSerializer
+
+class ShowRatingUpdateView(generics.UpdateAPIView):
+    queryset = ShowRatingModel.objects.all()
+    serializer_class = ShowRatingModelSerializer
+
+class ShowRatingDestroyView(generics.DestroyAPIView):
+    queryset = ShowRatingModel.objects.all()
+    serializer_class = ShowRatingModelSerializer
