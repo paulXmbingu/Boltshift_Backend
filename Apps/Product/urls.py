@@ -8,7 +8,7 @@ from .views import (
     PhotosListView, PhotosCreateView, PhotosRetrieveView, PhotosUpdateView, PhotosDestroyView,
     VideosListView, VideosCreateView, VideosRetrieveView, VideosUpdateView, VideosDestroyView,
     ShowRatingListView, ShowRatingCreateView, ShowRatingRetrieveView, ShowRatingUpdateView, ShowRatingDestroyView,
-    
+
     )
 
 urlpatterns = [
