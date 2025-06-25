@@ -13,8 +13,8 @@ from .views import (
     Option1ListView, Option1CreateView, Option1RetrieveView, Option1UpdateView, Option1DestroyView,
     Option2ListView, Option2CreateView, Option2RetrieveView, Option2UpdateView, Option2DestroyView,
     TagsListView, TagsCreateView, TagsRetrieveView, TagsUpdateView, TagsDestroyView,
-    DescriptionListView, DescriptionCreateView, DescriptionRetrieveView, DescriptionUpdateView, DescriptionDestroyView
-
+    DescriptionListView, DescriptionCreateView, DescriptionRetrieveView, DescriptionUpdateView, DescriptionDestroyView,
+    SpecificationListView, SpecificationCreateView, SpecificationRetrieveView, SpecificationUpdateView, SpecificationDestroyView, 
     )
 
 urlpatterns = [
@@ -101,4 +101,10 @@ urlpatterns = [
     path('description/retrieve/<int:pk>/', DescriptionRetrieveView.as_view(), name='description-retrieve'),
     path('description/update/<int:pk>/', DescriptionUpdateView.as_view(), name='description-update'),
     path('description/destroy/<int:pk>/', DescriptionDestroyView.as_view(), name='description-destroy'),
+
+    path('specification/', SpecificationListView.as_view(), name='specification-list'),
+    path('specification/create/', SpecificationCreateView.as_view(), name='specification-create'),
+    path('specification/retrieve/<int:pk>/', SpecificationRetrieveView.as_view(), name='specification-retrieve'),
+    path('specification/update/<int:pk>/', SpecificationUpdateView.as_view(), name='specification-update'),
+    path('specification/destroy/<int:pk>/', SpecificationDestroyView.as_view(), name='specification-destroy')
 ]

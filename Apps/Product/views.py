@@ -4,14 +4,14 @@ from .models import (
     CategoryModel, SubCategoryModel, PhotosModel, 
     VideosModel, ShowRatingModel, ReviewModel,
     InventoryMeterModel, Option1Model, Option2Model,
-    TagsModel, DescriptionModel, 
+    TagsModel, DescriptionModel, SpecificationModel, 
 )
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
     CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer,
     VideosModelSerializer, ShowRatingModelSerializer, ReviewModelSerializer,
     InventoryMeterModelSerializer, Option1ModelSerializer, Option2ModelSerializer,
-    TagsModelSerializer, DescriptionModelSerializer, 
+    TagsModelSerializer, DescriptionModelSerializer, SpecificationModelSerializer,
 )
 
 
@@ -349,3 +349,27 @@ class DescriptionUpdateView(generics.UpdateAPIView):
 class DescriptionDestroyView(generics.DestroyAPIView):
     queryset = DescriptionModel.objects.all()
     serializer_class = DescriptionModelSerializer
+
+
+
+
+
+class SpecificationListView(generics.ListAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer
+
+class SpecificationCreateView(generics.CreateAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer
+
+class SpecificationRetrieveView(generics.RetrieveAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer
+
+class SpecificationUpdateView(generics.UpdateAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer
+
+class SpecificationDestroyView(generics.DestroyAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer
