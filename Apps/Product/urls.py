@@ -8,7 +8,9 @@ from .views import (
     PhotosListView, PhotosCreateView, PhotosRetrieveView, PhotosUpdateView, PhotosDestroyView,
     VideosListView, VideosCreateView, VideosRetrieveView, VideosUpdateView, VideosDestroyView,
     ShowRatingListView, ShowRatingCreateView, ShowRatingRetrieveView, ShowRatingUpdateView, ShowRatingDestroyView,
-    
+    ReviewListView, ReviewCreateView, ReviewRetrieveView, ReviewUpdateView, ReviewDestroyView,
+    InventoryMeterListView, InventoryMeterCreateView, InventoryMeterRetrieveView, InventoryMeterUpdateView, InventoryMeterDestroyView,
+
     )
 
 urlpatterns = [
@@ -54,11 +56,21 @@ urlpatterns = [
     path('videos/update/<int:pk>/', VideosUpdateView.as_view(), name='videos-update'),
     path('videos/destroy/<int:pk>/', VideosDestroyView.as_view(), name='videos-destroy'),
 
-    path('show-ratings/', ShowRatingListView.as_view(), name='show-ratings'),
+    path('show-ratings/', ShowRatingListView.as_view(), name='show-ratings-list'),
     path('show-ratings/create/', ShowRatingCreateView.as_view(), name='show-ratings-create'),
     path('show-ratings/retrieve/<int:pk>/', ShowRatingRetrieveView.as_view(), name='show-ratings-retrieve'),
     path('show-ratings/update/<int:pk>/', ShowRatingUpdateView.as_view(), name='show-ratings-update'),
     path('show-ratings/destroy/<int:pk>/', ShowRatingDestroyView.as_view(), name='show-ratings-destroy'),
 
-    
+    path('review/', ReviewListView.as_view(), name='review-list'),
+    path('review/create/', ReviewCreateView.as_view(), name='review-create'),
+    path('review/retrieve/<int:pk>/', ReviewRetrieveView.as_view(), name='review-retrieve'),
+    path('review/update/<int:pk>/', ReviewUpdateView.as_view(), name='review-update'),
+    path('review/destroy/<int:pk>/', ReviewDestroyView.as_view(), name='review-destroy'),
+
+    path('inventory-meter/', InventoryMeterListView.as_view(), name='inventory-meter-list'),
+    path('inventory-meter/create/', InventoryMeterCreateView.as_view(), name='inventory-meter-create'),
+    path('inventory-meter/retrieve/<int:pk>/', InventoryMeterRetrieveView.as_view(), name='inventory-meter-retrieve'),
+    path('inventory-meter/update/<int:pk>/', InventoryMeterUpdateView.as_view(), name='inventory-meter-update'),
+    path('inventory-meter/destroy/<int:pk>/', InventoryMeterDestroyView.as_view(), name='inventory-meter-destroy')
 ]

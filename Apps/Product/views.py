@@ -2,12 +2,14 @@ from rest_framework import generics
 from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
     CategoryModel, SubCategoryModel, PhotosModel, 
-    VideosModel, ShowRatingModel, 
+    VideosModel, ShowRatingModel, ReviewModel,
+    InventoryMeterModel, 
 )
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
     CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer,
-    VideosModelSerializer, ShowRatingModelSerializer
+    VideosModelSerializer, ShowRatingModelSerializer, ReviewModelSerializer,
+    InventoryMeterModelSerializer,
 )
 
 
@@ -201,3 +203,51 @@ class ShowRatingUpdateView(generics.UpdateAPIView):
 class ShowRatingDestroyView(generics.DestroyAPIView):
     queryset = ShowRatingModel.objects.all()
     serializer_class = ShowRatingModelSerializer
+
+
+
+
+
+class ReviewListView(generics.ListAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+class ReviewCreateView(generics.CreateAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+class ReviewRetrieveView(generics.RetrieveAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+class ReviewUpdateView(generics.UpdateAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+class ReviewDestroyView(generics.DestroyAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+
+
+
+
+class InventoryMeterListView(generics.ListAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
+
+class InventoryMeterCreateView(generics.CreateAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
+
+class InventoryMeterRetrieveView(generics.RetrieveAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
+
+class InventoryMeterUpdateView(generics.UpdateAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
+
+class InventoryMeterDestroyView(generics.DestroyAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
