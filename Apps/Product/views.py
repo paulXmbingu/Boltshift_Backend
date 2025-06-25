@@ -3,13 +3,15 @@ from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
     CategoryModel, SubCategoryModel, PhotosModel, 
     VideosModel, ShowRatingModel, ReviewModel,
-    InventoryMeterModel, 
+    InventoryMeterModel, Option1Model, Option2Model,
+
 )
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
     CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer,
     VideosModelSerializer, ShowRatingModelSerializer, ReviewModelSerializer,
-    InventoryMeterModelSerializer,
+    InventoryMeterModelSerializer, Option1ModelSerializer, Option2ModelSerializer,
+
 )
 
 
@@ -251,3 +253,51 @@ class InventoryMeterUpdateView(generics.UpdateAPIView):
 class InventoryMeterDestroyView(generics.DestroyAPIView):
     queryset = InventoryMeterModel.objects.all()
     serializer_class = InventoryMeterModelSerializer
+
+
+
+
+
+class Option1ListView(generics.ListAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+class Option1CreateView(generics.CreateAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+class Option1RetrieveView(generics.RetrieveAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+class Option1UpdateView(generics.UpdateAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+class Option1DestroyView(generics.DestroyAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+
+
+
+
+class Option2ListView(generics.ListAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer
+
+class Option2CreateView(generics.CreateAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer
+
+class Option2RetrieveView(generics.RetrieveAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer
+
+class Option2UpdateView(generics.UpdateAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer
+
+class Option2DestroyView(generics.DestroyAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer

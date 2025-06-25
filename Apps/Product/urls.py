@@ -10,7 +10,9 @@ from .views import (
     ShowRatingListView, ShowRatingCreateView, ShowRatingRetrieveView, ShowRatingUpdateView, ShowRatingDestroyView,
     ReviewListView, ReviewCreateView, ReviewRetrieveView, ReviewUpdateView, ReviewDestroyView,
     InventoryMeterListView, InventoryMeterCreateView, InventoryMeterRetrieveView, InventoryMeterUpdateView, InventoryMeterDestroyView,
-
+    Option1ListView, Option1CreateView, Option1RetrieveView, Option1UpdateView, Option1DestroyView,
+    Option2ListView, Option2CreateView, Option2RetrieveView, Option2UpdateView, Option2DestroyView,
+    
     )
 
 urlpatterns = [
@@ -72,5 +74,17 @@ urlpatterns = [
     path('inventory-meter/create/', InventoryMeterCreateView.as_view(), name='inventory-meter-create'),
     path('inventory-meter/retrieve/<int:pk>/', InventoryMeterRetrieveView.as_view(), name='inventory-meter-retrieve'),
     path('inventory-meter/update/<int:pk>/', InventoryMeterUpdateView.as_view(), name='inventory-meter-update'),
-    path('inventory-meter/destroy/<int:pk>/', InventoryMeterDestroyView.as_view(), name='inventory-meter-destroy')
+    path('inventory-meter/destroy/<int:pk>/', InventoryMeterDestroyView.as_view(), name='inventory-meter-destroy'),
+
+    path('option1/', Option1ListView.as_view(), name='option1-list'),
+    path('option1/create/', Option1CreateView.as_view(), name='option1-create'),
+    path('option1/retrieve/<int:pk>/', Option1RetrieveView.as_view(), name='option1-retrieve'),
+    path('option1/update/<int:pk>/', Option1UpdateView.as_view(), name='option1-update'),
+    path('option1/destroy/<int:pk>/', Option1DestroyView.as_view(), name='option1-destroy'),
+
+    path('option2/', Option2ListView.as_view(), name='option2-list'),
+    path('option2/create/', Option2CreateView.as_view(), name='option2-create'),
+    path('option2/retrieve/<int:pk>/', Option2RetrieveView.as_view(), name='option2-retrieve'),
+    path('option2/update/<int:pk>/', Option2UpdateView.as_view(), name='option2-update'),
+    path('option2/destroy/<int:pk>/', Option2DestroyView.as_view(), name='option2-destroy'),
 ]
