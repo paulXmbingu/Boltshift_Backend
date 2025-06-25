@@ -12,7 +12,8 @@ from .views import (
     InventoryMeterListView, InventoryMeterCreateView, InventoryMeterRetrieveView, InventoryMeterUpdateView, InventoryMeterDestroyView,
     Option1ListView, Option1CreateView, Option1RetrieveView, Option1UpdateView, Option1DestroyView,
     Option2ListView, Option2CreateView, Option2RetrieveView, Option2UpdateView, Option2DestroyView,
-    
+    TagsListView, TagsCreateView, TagsRetrieveView, TagsUpdateView, TagsDestroyView,
+
     )
 
 urlpatterns = [
@@ -87,4 +88,10 @@ urlpatterns = [
     path('option2/retrieve/<int:pk>/', Option2RetrieveView.as_view(), name='option2-retrieve'),
     path('option2/update/<int:pk>/', Option2UpdateView.as_view(), name='option2-update'),
     path('option2/destroy/<int:pk>/', Option2DestroyView.as_view(), name='option2-destroy'),
+
+    path('tags/', TagsListView.as_view(), name='tags-list'),
+    path('tags/create/', TagsCreateView.as_view(), name='tags-create'),
+    path('tags/retrieve/<int:pk>/', TagsRetrieveView.as_view(), name='tags-retrieve'),
+    path('tags/update/<int:pk>/', TagsUpdateView.as_view(), name='tags-update'),
+    path('tags/destroy/<int:pk>/', TagsDestroyView.as_view(), name='tags-destroy')
 ]

@@ -4,14 +4,14 @@ from .models import (
     CategoryModel, SubCategoryModel, PhotosModel, 
     VideosModel, ShowRatingModel, ReviewModel,
     InventoryMeterModel, Option1Model, Option2Model,
-
+    TagsModel, 
 )
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
     CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer,
     VideosModelSerializer, ShowRatingModelSerializer, ReviewModelSerializer,
     InventoryMeterModelSerializer, Option1ModelSerializer, Option2ModelSerializer,
-
+    TagsModelSerializer,
 )
 
 
@@ -301,3 +301,27 @@ class Option2UpdateView(generics.UpdateAPIView):
 class Option2DestroyView(generics.DestroyAPIView):
     queryset = Option2Model.objects.all()
     serializer_class = Option2ModelSerializer
+
+
+
+
+
+class TagsListView(generics.ListAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
+
+class TagsCreateView(generics.CreateAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
+
+class TagsRetrieveView(generics.RetrieveAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
+
+class TagsUpdateView(generics.UpdateAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
+
+class TagsDestroyView(generics.DestroyAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
