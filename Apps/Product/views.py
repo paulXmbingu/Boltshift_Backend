@@ -2,12 +2,16 @@ from rest_framework import generics
 from .models import (
     DetailModel, SummaryDescriptionModel, BrandModel,
     CategoryModel, SubCategoryModel, PhotosModel, 
-    VideosModel, ShowRatingModel, 
+    VideosModel, ShowRatingModel, ReviewModel,
+    InventoryMeterModel, Option1Model, Option2Model,
+    TagsModel, DescriptionModel, SpecificationModel, 
 )
 from .serializers import (
     DetailModelSerializer, SummaryDescriptionSerializer, BrandModelSerializer,
     CategoryModelSerializer, SubCategoryModelSerializer, PhotosModelSerializer,
-    VideosModelSerializer, ShowRatingModelSerializer
+    VideosModelSerializer, ShowRatingModelSerializer, ReviewModelSerializer,
+    InventoryMeterModelSerializer, Option1ModelSerializer, Option2ModelSerializer,
+    TagsModelSerializer, DescriptionModelSerializer, SpecificationModelSerializer,
 )
 
 
@@ -201,3 +205,171 @@ class ShowRatingUpdateView(generics.UpdateAPIView):
 class ShowRatingDestroyView(generics.DestroyAPIView):
     queryset = ShowRatingModel.objects.all()
     serializer_class = ShowRatingModelSerializer
+
+
+
+
+
+class ReviewListView(generics.ListAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+class ReviewCreateView(generics.CreateAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+class ReviewRetrieveView(generics.RetrieveAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+class ReviewUpdateView(generics.UpdateAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+class ReviewDestroyView(generics.DestroyAPIView):
+    queryset = ReviewModel.objects.all()
+    serializer_class = ReviewModelSerializer
+
+
+
+
+
+class InventoryMeterListView(generics.ListAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
+
+class InventoryMeterCreateView(generics.CreateAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
+
+class InventoryMeterRetrieveView(generics.RetrieveAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
+
+class InventoryMeterUpdateView(generics.UpdateAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
+
+class InventoryMeterDestroyView(generics.DestroyAPIView):
+    queryset = InventoryMeterModel.objects.all()
+    serializer_class = InventoryMeterModelSerializer
+
+
+
+
+
+class Option1ListView(generics.ListAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+class Option1CreateView(generics.CreateAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+class Option1RetrieveView(generics.RetrieveAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+class Option1UpdateView(generics.UpdateAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+class Option1DestroyView(generics.DestroyAPIView):
+    queryset = Option1Model.objects.all()
+    serializer_class = Option1ModelSerializer
+
+
+
+
+
+class Option2ListView(generics.ListAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer
+
+class Option2CreateView(generics.CreateAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer
+
+class Option2RetrieveView(generics.RetrieveAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer
+
+class Option2UpdateView(generics.UpdateAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer
+
+class Option2DestroyView(generics.DestroyAPIView):
+    queryset = Option2Model.objects.all()
+    serializer_class = Option2ModelSerializer
+
+
+
+
+
+class TagsListView(generics.ListAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
+
+class TagsCreateView(generics.CreateAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
+
+class TagsRetrieveView(generics.RetrieveAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
+
+class TagsUpdateView(generics.UpdateAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
+
+class TagsDestroyView(generics.DestroyAPIView):
+    queryset = TagsModel.objects.all()
+    serializer_class = TagsModelSerializer
+
+
+
+
+
+class DescriptionListView(generics.ListAPIView):
+    queryset = DescriptionModel.objects.all()
+    serializer_class = DescriptionModelSerializer
+
+class DescriptionCreateView(generics.CreateAPIView):
+    queryset = DescriptionModel.objects.all()
+    serializer_class = DescriptionModelSerializer
+
+class DescriptionRetrieveView(generics.RetrieveAPIView):
+    queryset = DescriptionModel.objects.all()
+    serializer_class = DescriptionModelSerializer
+
+class DescriptionUpdateView(generics.UpdateAPIView):
+    queryset = DescriptionModel.objects.all()
+    serializer_class = DescriptionModelSerializer
+
+class DescriptionDestroyView(generics.DestroyAPIView):
+    queryset = DescriptionModel.objects.all()
+    serializer_class = DescriptionModelSerializer
+
+
+
+
+
+class SpecificationListView(generics.ListAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer
+
+class SpecificationCreateView(generics.CreateAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer
+
+class SpecificationRetrieveView(generics.RetrieveAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer
+
+class SpecificationUpdateView(generics.UpdateAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer
+
+class SpecificationDestroyView(generics.DestroyAPIView):
+    queryset = SpecificationModel.objects.all()
+    serializer_class = SpecificationModelSerializer

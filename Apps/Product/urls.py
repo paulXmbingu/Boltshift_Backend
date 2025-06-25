@@ -8,7 +8,13 @@ from .views import (
     PhotosListView, PhotosCreateView, PhotosRetrieveView, PhotosUpdateView, PhotosDestroyView,
     VideosListView, VideosCreateView, VideosRetrieveView, VideosUpdateView, VideosDestroyView,
     ShowRatingListView, ShowRatingCreateView, ShowRatingRetrieveView, ShowRatingUpdateView, ShowRatingDestroyView,
-
+    ReviewListView, ReviewCreateView, ReviewRetrieveView, ReviewUpdateView, ReviewDestroyView,
+    InventoryMeterListView, InventoryMeterCreateView, InventoryMeterRetrieveView, InventoryMeterUpdateView, InventoryMeterDestroyView,
+    Option1ListView, Option1CreateView, Option1RetrieveView, Option1UpdateView, Option1DestroyView,
+    Option2ListView, Option2CreateView, Option2RetrieveView, Option2UpdateView, Option2DestroyView,
+    TagsListView, TagsCreateView, TagsRetrieveView, TagsUpdateView, TagsDestroyView,
+    DescriptionListView, DescriptionCreateView, DescriptionRetrieveView, DescriptionUpdateView, DescriptionDestroyView,
+    SpecificationListView, SpecificationCreateView, SpecificationRetrieveView, SpecificationUpdateView, SpecificationDestroyView, 
     )
 
 urlpatterns = [
@@ -52,7 +58,53 @@ urlpatterns = [
     path('videos/create/', VideosCreateView.as_view(), name='videos-create'),
     path('videos/retrieve/<int:pk>/', VideosRetrieveView.as_view(), name='videos-retrieve'),
     path('videos/update/<int:pk>/', VideosUpdateView.as_view(), name='videos-update'),
-    path('videos/destroy/<int:pk>/', VideosDestroyView.as_view(), name='videos-destroy')
+    path('videos/destroy/<int:pk>/', VideosDestroyView.as_view(), name='videos-destroy'),
 
-    
+    path('show-ratings/', ShowRatingListView.as_view(), name='show-ratings-list'),
+    path('show-ratings/create/', ShowRatingCreateView.as_view(), name='show-ratings-create'),
+    path('show-ratings/retrieve/<int:pk>/', ShowRatingRetrieveView.as_view(), name='show-ratings-retrieve'),
+    path('show-ratings/update/<int:pk>/', ShowRatingUpdateView.as_view(), name='show-ratings-update'),
+    path('show-ratings/destroy/<int:pk>/', ShowRatingDestroyView.as_view(), name='show-ratings-destroy'),
+
+    path('review/', ReviewListView.as_view(), name='review-list'),
+    path('review/create/', ReviewCreateView.as_view(), name='review-create'),
+    path('review/retrieve/<int:pk>/', ReviewRetrieveView.as_view(), name='review-retrieve'),
+    path('review/update/<int:pk>/', ReviewUpdateView.as_view(), name='review-update'),
+    path('review/destroy/<int:pk>/', ReviewDestroyView.as_view(), name='review-destroy'),
+
+    path('inventory-meter/', InventoryMeterListView.as_view(), name='inventory-meter-list'),
+    path('inventory-meter/create/', InventoryMeterCreateView.as_view(), name='inventory-meter-create'),
+    path('inventory-meter/retrieve/<int:pk>/', InventoryMeterRetrieveView.as_view(), name='inventory-meter-retrieve'),
+    path('inventory-meter/update/<int:pk>/', InventoryMeterUpdateView.as_view(), name='inventory-meter-update'),
+    path('inventory-meter/destroy/<int:pk>/', InventoryMeterDestroyView.as_view(), name='inventory-meter-destroy'),
+
+    path('option1/', Option1ListView.as_view(), name='option1-list'),
+    path('option1/create/', Option1CreateView.as_view(), name='option1-create'),
+    path('option1/retrieve/<int:pk>/', Option1RetrieveView.as_view(), name='option1-retrieve'),
+    path('option1/update/<int:pk>/', Option1UpdateView.as_view(), name='option1-update'),
+    path('option1/destroy/<int:pk>/', Option1DestroyView.as_view(), name='option1-destroy'),
+
+    path('option2/', Option2ListView.as_view(), name='option2-list'),
+    path('option2/create/', Option2CreateView.as_view(), name='option2-create'),
+    path('option2/retrieve/<int:pk>/', Option2RetrieveView.as_view(), name='option2-retrieve'),
+    path('option2/update/<int:pk>/', Option2UpdateView.as_view(), name='option2-update'),
+    path('option2/destroy/<int:pk>/', Option2DestroyView.as_view(), name='option2-destroy'),
+
+    path('tags/', TagsListView.as_view(), name='tags-list'),
+    path('tags/create/', TagsCreateView.as_view(), name='tags-create'),
+    path('tags/retrieve/<int:pk>/', TagsRetrieveView.as_view(), name='tags-retrieve'),
+    path('tags/update/<int:pk>/', TagsUpdateView.as_view(), name='tags-update'),
+    path('tags/destroy/<int:pk>/', TagsDestroyView.as_view(), name='tags-destroy'),
+
+    path('description/', DescriptionListView.as_view(), name='description-list'),
+    path('description/create/', DescriptionCreateView.as_view(), name='description-create'),
+    path('description/retrieve/<int:pk>/', DescriptionRetrieveView.as_view(), name='description-retrieve'),
+    path('description/update/<int:pk>/', DescriptionUpdateView.as_view(), name='description-update'),
+    path('description/destroy/<int:pk>/', DescriptionDestroyView.as_view(), name='description-destroy'),
+
+    path('specification/', SpecificationListView.as_view(), name='specification-list'),
+    path('specification/create/', SpecificationCreateView.as_view(), name='specification-create'),
+    path('specification/retrieve/<int:pk>/', SpecificationRetrieveView.as_view(), name='specification-retrieve'),
+    path('specification/update/<int:pk>/', SpecificationUpdateView.as_view(), name='specification-update'),
+    path('specification/destroy/<int:pk>/', SpecificationDestroyView.as_view(), name='specification-destroy')
 ]
