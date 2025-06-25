@@ -13,6 +13,7 @@ from .views import (
     Option1ListView, Option1CreateView, Option1RetrieveView, Option1UpdateView, Option1DestroyView,
     Option2ListView, Option2CreateView, Option2RetrieveView, Option2UpdateView, Option2DestroyView,
     TagsListView, TagsCreateView, TagsRetrieveView, TagsUpdateView, TagsDestroyView,
+    DescriptionListView, DescriptionCreateView, DescriptionRetrieveView, DescriptionUpdateView, DescriptionDestroyView
 
     )
 
@@ -93,5 +94,11 @@ urlpatterns = [
     path('tags/create/', TagsCreateView.as_view(), name='tags-create'),
     path('tags/retrieve/<int:pk>/', TagsRetrieveView.as_view(), name='tags-retrieve'),
     path('tags/update/<int:pk>/', TagsUpdateView.as_view(), name='tags-update'),
-    path('tags/destroy/<int:pk>/', TagsDestroyView.as_view(), name='tags-destroy')
+    path('tags/destroy/<int:pk>/', TagsDestroyView.as_view(), name='tags-destroy'),
+
+    path('description/', DescriptionListView.as_view(), name='description-list'),
+    path('description/create/', DescriptionCreateView.as_view(), name='description-create'),
+    path('description/retrieve/<int:pk>/', DescriptionRetrieveView.as_view(), name='description-retrieve'),
+    path('description/update/<int:pk>/', DescriptionUpdateView.as_view(), name='description-update'),
+    path('description/destroy/<int:pk>/', DescriptionDestroyView.as_view(), name='description-destroy'),
 ]
