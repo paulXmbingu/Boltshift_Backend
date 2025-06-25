@@ -8,7 +8,7 @@ from .views import (
     PhotosListView, PhotosCreateView, PhotosRetrieveView, PhotosUpdateView, PhotosDestroyView,
     VideosListView, VideosCreateView, VideosRetrieveView, VideosUpdateView, VideosDestroyView,
     ShowRatingListView, ShowRatingCreateView, ShowRatingRetrieveView, ShowRatingUpdateView, ShowRatingDestroyView,
-
+    
     )
 
 urlpatterns = [
@@ -52,7 +52,13 @@ urlpatterns = [
     path('videos/create/', VideosCreateView.as_view(), name='videos-create'),
     path('videos/retrieve/<int:pk>/', VideosRetrieveView.as_view(), name='videos-retrieve'),
     path('videos/update/<int:pk>/', VideosUpdateView.as_view(), name='videos-update'),
-    path('videos/destroy/<int:pk>/', VideosDestroyView.as_view(), name='videos-destroy')
+    path('videos/destroy/<int:pk>/', VideosDestroyView.as_view(), name='videos-destroy'),
+
+    path('show-ratings/', ShowRatingListView.as_view(), name='show-ratings'),
+    path('show-ratings/create/', ShowRatingCreateView.as_view(), name='show-ratings-create'),
+    path('show-ratings/retrieve/<int:pk>/', ShowRatingRetrieveView.as_view(), name='show-ratings-retrieve'),
+    path('show-ratings/update/<int:pk>/', ShowRatingUpdateView.as_view(), name='show-ratings-update'),
+    path('show-ratings/destroy/<int:pk>/', ShowRatingDestroyView.as_view(), name='show-ratings-destroy'),
 
     
 ]
