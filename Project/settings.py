@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     
     # Project Apps
     'Apps.Product.apps.ProductConfig',
+    'Apps.Vendor.apps.VendorConfig',
 ]
 
 MIDDLEWARE = [
